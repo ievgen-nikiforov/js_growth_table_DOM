@@ -25,9 +25,7 @@ appendRowBtn.addEventListener('click', function (e) {
 });
 
 deleteRowBtn.addEventListener('click', function (e) {
-  const row = document.querySelector('tr');
-
-  row.remove();
+  document.querySelector('tbody tr:last-child').remove();
 
   const newRows = document.querySelectorAll('tr');
 
@@ -49,9 +47,7 @@ deleteColumnBtn.addEventListener('click', function (e) {
   const rows = [...document.querySelectorAll('tr')];
 
   rows.forEach((row) => {
-    const el = row.querySelector('td');
-
-    el.remove();
+    row.querySelector('td:last-child').remove();
   });
 
   const newRow = document.querySelector('tr');
